@@ -27,3 +27,26 @@ Portafolio web con estilo **Dadá** que muestra:
 - Google Fonts (Space Grotesk)
 
 ## 📁 Estructura del Proyecto
+portafolio/
+├── index.html # Página principal (Hero + Carrusel)
+├── proyectos.html # Galería completa de proyectos
+├── servidores.html # Mi infraestructura
+├── css/style.css # Estilos unificados
+├── js/main.js # Funcionalidades
+└── images/ # Capturas de pantalla
+
+text
+
+## 📬 Contacto
+
+Usa el formulario de Google en el sitio web.
+
+## 📄 Licencia
+
+MIT - Libre para usar y modificar
+
+---
+
+<div align="center">
+  <p>Hecho con ❤️ desde Venezuela</p>
+</div>
