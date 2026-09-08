@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesús Pérez | Portafolio Dadá</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Estilos Principales -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ═══════════════════ NAVBAR (Dadá) ═══════════════════ -->
+    <nav class="navbar dada-nav">
+        <div class="container">
+            <a href="index.html" class="logo dada-logo">Jesús<span>Pérez</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servidores.html">Servidores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle dada-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger dada-hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════ HERO (Dadá) ═══════════════════ -->
+    <section id="inicio" class="hero dada-hero">
+        <div class="container">
+            <div class="hero-content dada-grid">
+                <div class="hero-text animate__animated animate__fadeInUp">
+                    <span class="badge dada-badge">🚀 ¡Hola! Soy</span>
+                    <h1 class="dada-title">Jesús Pérez</h1>
+                    <h2 class="dada-subtitle">Desarrollador Web & Aprendiz de Infraestructura</h2>
+                    <p class="dada-text">De Venezuela, 18 años. Construyo sistemas que resuelven problemas reales.</p>
+                    <div class="hero-buttons">
+                        <a href="proyectos.html" class="btn btn-primary dada-btn-primary">
+                            <i class="fas fa-code"></i> Ver Proyectos
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary dada-btn-secondary">
+                            <i class="fas fa-envelope"></i> Contactarme
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/efaxtower" target="_blank" class="social-icon dada-icon"><i class="fab fa-github"></i></a>
+                     
+                        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-icon dada-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://dravictoriap.com" target="_blank" class="social-icon dada-icon"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image animate__animated animate__zoomIn">
+                    <div class="profile-circle dada-circle">
+                        <img src="images/perfil.jpg" alt="Jesús Pérez" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-blur dada-blur"></div>
+        <!-- Elementos Dadá decorativos -->
+        <div class="dada-deco deco-1">●</div>
+        <div class="dada-deco deco-2">■</div>
+        <div class="dada-deco deco-3">▲</div>
+    </section>
+
+    <!-- ═══════════════════ CARRUSEL DADÁ DE PROYECTOS ═══════════════════ -->
+    <section id="carrusel" class="carrusel-dada">
+        <div class="container">
+            <div class="section-header dada-header">
+                <span class="section-tag">Proyectos Destacados</span>
+                <h2>Mis Creaciones <span class="dada-emoji">🎭</span></h2>
+                <p>Un vistazo caótico a lo que he construido</p>
+            </div>
+
+            <div class="carrusel-container">
+                <div class="carrusel-track" id="carruselTrack">
+                    <!-- Slide 1: SindroMerchado -->
+                    <div class="carrusel-slide">
+                        <div class="carrusel-card dada-card">
+                            <div class="carrusel-img">
+                                <img src="images/sindromerchado.png" alt="SindroMerchado" />
+                                <span class="badge-privado">🔒 Privado</span>
+                            </div>
+                            <div class="carrusel-info">
+                                <h3>SindroMerchado</h3>
+                                <p>Sistema de supermercado online con 6 microservicios en PHP puro. API Gateway, autenticación por API Key y bases de datos separadas.</p>
+                                <div class="carrusel-tags">
+                                    <span>PHP</span><span>MySQL</span><span>Microservicios</span><span>API Gateway</span>
+                                </div>
+                                <a href="proyectos.html#sindromerchado" class="btn btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Panadería -->
+                    <div class="carrusel-slide">
+                        <div class="carrusel-card dada-card">
+                            <div class="carrusel-img">
+                                <img src="images/panaderia.png" alt="Sistema Panadería" />
+                                <span class="badge-produccion">✅ En Producción</span>
+                            </div>
+                            <div class="carrusel-info">
+                                <h3>Sistema de Panadería</h3>
+                                <p>CRUD que mi papá usa para calcular costos, ganancias y precios de venta. En uso real todos los días.</p>
+                                <div class="carrusel-tags">
+                                    <span>PHP</span><span>MySQL</span><span>CRUD</span>
+                                </div>
+                                <a href="proyectos.html#panaderia" class="btn btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Beep Jesus Pro -->
+                    <div class="carrusel-slide">
+                        <div class="carrusel-card dada-card">
+                            <div class="carrusel-img">
+                                <img src="images/beep-jesus.png" alt="Beep Jesus Pro" />
+                                <span class="badge-publico">🌐 Público</span>
+                            </div>
+                            <div class="carrusel-info">
+                                <h3>Beep Jesus Pro v3.0.1</h3>
+                                <p>Script en Bash que convierte MIDI a frecuencias para el buzzer de Linux. "La Gata Bajo la Lluvia" al encender mi PC.</p>
+                                <div class="carrusel-tags">
+                                    <span>Bash</span><span>Linux</span><span>MIDI</span>
+                                </div>
+                                <a href="proyectos.html#beep" class="btn btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Dra. Victoria -->
+                    <div class="carrusel-slide">
+                        <div class="carrusel-card dada-card">
+                            <div class="carrusel-img">
+                                <img src="images/dra-victoria.png" alt="Dra. Victoria" />
+                                <span class="badge-produccion">✅ En Producción</span>
+                            </div>
+                            <div class="carrusel-info">
+                                <h3>Dra. Victoria</h3>
+                                <p>Sitio web médico con modales, mapa de ubicación y botones de WhatsApp con mensajes predefinidos.</p>
+                                <div class="carrusel-tags">
+                                    <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                                </div>
+                                <a href="proyectos.html#dravictoria" class="btn btn-sm">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Carrusel (Dadá) -->
+                <div class="carrusel-controls">
+                    <button id="prevSlide" class="carrusel-btn dada-btn-control">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div class="carrusel-dots" id="carruselDots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                    <button id="nextSlide" class="carrusel-btn dada-btn-control">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ SOBRE MÍ (Dadá) ═══════════════════ -->
+    <section id="sobre-mi" class="sobre-mi dada-section">
+        <div class="container">
+            <div class="section-header dada-header">
+                <span class="section-tag">Sobre Mí</span>
+                <h2>Un poco de mi caos <span class="dada-emoji">🌀</span></h2>
+                <p>Autodidacta, curioso y siempre aprendiendo.</p>
+            </div>
+            <div class="sobre-mi-grid dada-grid">
+                <div class="sobre-mi-card dada-card" style="transform: rotate(-2deg);">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>18 años</h3>
+                    <p>De Venezuela, aprendiendo desarrollo y administración de sistemas.</p>
+                </div>
+                <div class="sobre-mi-card dada-card" style="transform: rotate(3deg);">
+                    <i class="fas fa-server"></i>
+                    <h3>Servidor Propio</h3>
+                    <p>LAMP + Samba + Cockpit. Edito desde Windows, ejecuto en Linux.</p>
+                </div>
+                <div class="sobre-mi-card dada-card" style="transform: rotate(-1deg);">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Proyectos Reales</h3>
+                    <p>Mi papá usa mi sistema de panadería. La Dra. Victoria usa mi sitio web.</p>
+                </div>
+                <div class="sobre-mi-card dada-card" style="transform: rotate(4deg);">
+                    <i class="fas fa-brain"></i>
+                    <h3>Aprendizaje Constante</h3>
+                    <p>Laravel, Docker, redes, arquitectura de software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ CONTACTO ═══════════════════ -->
+    <section id="contacto" class="contacto dada-section">
+        <div class="container">
+            <div class="section-header dada-header">
+                <span class="section-tag">Contacto</span>
+                <h2>Hablemos <span class="dada-emoji">📞</span></h2>
+                <p>¿Tienes un proyecto o quieres colaborar? Escríbeme.</p>
+            </div>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="contacto-item dada-card" style="transform: rotate(2deg);">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/tuusuario" target="_blank">github.com/efaxtower</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Formulario que redirige a Google Forms -->
+<div class="contacto-form-wrapper">
+    <p class="form-invite">📬 ¡Escríbeme! Usa este formulario y te responderé por email.</p>
+    <a href="https://forms.gle/QAihPT8mAGCK59KF9" 
+       target="_blank" 
+       class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i> Abrir Formulario
+    </a>
+    <p class="form-note">⚠️ Serás redirigido a Google Forms. Sin spam, sin ataques, sin backend.</p>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="footer dada-footer">
+        <div class="container">
+            <p>&copy; 2026 Jesús Pérez. Hecho con ❤️ desde Venezuela</p>
+            <div class="footer-social">
+                <a href="https://github.com/efaxtower" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
