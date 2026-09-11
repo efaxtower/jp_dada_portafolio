@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servidores | Jesús Pérez</title>
+    <meta name="description" content="Infraestructura de Jesús Pérez: servidor LAMP + Samba + Cockpit, con flujo de trabajo Windows → Linux.">
+    <meta property="og:title" content="Servidores | Jesús Pérez">
+    <meta property="og:description" content="Cómo administro mi servidor Linux desde cero.">
+    <meta property="og:image" content="https://efaxtower.github.io/jp_dada_portafolio/images/perfil.jpg">
+    <meta property="og:url" content="https://efaxtower.github.io/jp_dada_portafolio/servidores.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <nav class="navbar dada-nav">
+        <div class="container">
+            <a href="index.html" class="logo dada-logo">Jesús<span>Pérez</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+                <li><a href="index.html#habilidades">Habilidades</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servidores.html">Servidores</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle dada-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+            <div class="hamburger dada-hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="dada-title">Mi Infraestructura <span class="dada-emoji">⚡</span></h1>
+            <p class="dada-text">Cómo gestiono mis servidores y sistemas.</p>
+        </div>
+    </section>
+
+    <section class="servidores-content">
+        <div class="container">
+            <div class="servidor-card-dada dada-card" style="transform: rotate(-1deg);">
+                <div class="servidor-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="servidor-info">
+                    <h2>Servidor Local LAMP + Samba</h2>
+                    <p><strong>Especificaciones:</strong> 1GB RAM, Linux, Apache, MySQL, PHP</p>
+                    <p><strong>Acceso:</strong> Samba para editar desde Windows</p>
+                    <p><strong>Administración:</strong> Cockpit</p>
+                    <p><strong>Futuro:</strong> Dockerización</p>
+                </div>
+            </div>
+
+            <div class="servidor-grid-dada">
+                <div class="servidor-componente dada-card" style="transform: rotate(2deg);">
+                    <i class="fas fa-tasks"></i>
+                    <h3>LAMP</h3>
+                    <p>Linux, Apache, MySQL, PHP. Stack completo para desarrollo web.</p>
+                </div>
+                <div class="servidor-componente dada-card" style="transform: rotate(-2deg);">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Samba</h3>
+                    <p>Compartir archivos en red. Edito código desde Windows, se guarda automáticamente en el servidor.</p>
+                </div>
+                <div class="servidor-componente dada-card" style="transform: rotate(3deg);">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Cockpit</h3>
+                    <p>Administración del servidor desde el navegador. Monitoreo y gestión sencilla.</p>
+                </div>
+                <div class="servidor-componente dada-card" style="transform: rotate(-3deg);">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker <small>(Aprendiendo)</small></h3>
+                    <p>Contenedores y entornos virtuales para mis proyectos.</p>
+                </div>
+            </div>
+
+            <div class="servidor-flujo dada-card" style="transform: rotate(1deg);">
+                <h3>Flujo de Trabajo <span class="dada-emoji">🔄</span></h3>
+                <div class="flujo-items">
+                    <div class="flujo-item">
+                        <i class="fab fa-windows"></i>
+                        <span>Windows (Editor)</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flujo-item">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Samba</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flujo-item">
+                        <i class="fab fa-linux"></i>
+                        <span>Servidor Linux</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flujo-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Apache</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="flujo-item">
+                        <i class="fas fa-code"></i>
+                        <span>Proyecto</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="servidor-aprendizaje">
+                <div class="aprendizaje-card dada-card" style="transform: rotate(-2deg);">
+                    <h3><i class="fas fa-check-circle" style="color: var(--accent);"></i> Lo que ya sé</h3>
+                    <ul>
+                        <li>✅ Configurar LAMP desde cero</li>
+                        <li>✅ Compartir archivos con Samba</li>
+                        <li>✅ Administrar servidores con Cockpit</li>
+                        <li>✅ Gestionar permisos y usuarios en Linux</li>
+                        <li>✅ Conceptos básicos de Docker</li>
+                        <li>✅ Configurar Apache y virtual hosts</li>
+                        <li>✅ Vinculación Samba + Apache para desarrollo remoto</li>
+                    </ul>
+                </div>
+                <div class="aprendizaje-card dada-card" style="transform: rotate(3deg);">
+                    <h3><i class="fas fa-graduation-cap" style="color: var(--accent);"></i> Lo que estoy aprendiendo</h3>
+                    <ul>
+                        <li>📚 Redes avanzadas (Samba 1, 2 y 3)</li>
+                        <li>📚 Docker y contenedores</li>
+                        <li>📚 Automatización con scripts Bash</li>
+                        <li>📚 Seguridad en servidores</li>
+                        <li>📚 Cloud computing (próximo paso)</li>
+                        <li>📚 Montar un rack físico con servidores reales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer dada-footer">
+        <div class="container">
+            <p>&copy; 2026 Jesús Pérez. Hecho con ❤️ desde Venezuela</p>
+            <div class="footer-social">
+                <a href="https://github.com/efaxtower" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-084424435/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

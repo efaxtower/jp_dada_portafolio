@@ -1,0 +1,151 @@
+// ════════════════════════════════════════════════
+// THEME TOGGLE
+// ════════════════════════════════════════════════
+
+const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
+
+// ════════════════════════════════════════════════
+// HAMBURGER MENU
+// ════════════════════════════════════════════════
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
+// ════════════════════════════════════════════════
+// CARRUSEL
+// ════════════════════════════════════════════════
+
+const track = document.getElementById('carruselTrack');
+const slides = document.querySelectorAll('.carrusel-slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.getElementById('prevSlide');
+const nextBtn = document.getElementById('nextSlide');
+
+if (track && slides.length > 0) {
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateCarrusel(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => updateCarrusel(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => updateCarrusel(currentIndex + 1));
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => updateCarrusel(index));
+    });
+
+    let autoPlay = setInterval(() => updateCarrusel(currentIndex + 1), 5000);
+    const carruselContainer = document.querySelector('.carrusel-container');
+
+    if (carruselContainer) {
+        carruselContainer.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        carruselContainer.addEventListener('mouseleave', () => {
+            autoPlay = setInterval(() => updateCarrusel(currentIndex + 1), 5000);
+        });
+    }
+}
+
+// ════════════════════════════════════════════════
+// SCROLL SUAVE
+// ════════════════════════════════════════════════
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href.length <= 1) return;
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+// ════════════════════════════════════════════════
+// FORMULARIO
+// ════════════════════════════════════════════════
+
+const form = document.querySelector('.contacto-form');
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nombre = form.querySelector('input[type="text"]')?.value.trim();
+        const email = form.querySelector('input[type="email"]')?.value.trim();
+        const mensaje = form.querySelector('textarea')?.value.trim();
+
+        if (!nombre || !email || !mensaje) {
+            alert('Completa todos los campos, por favor.');
+            return;
+        }
+
+        alert('¡Mensaje enviado! (Demo)');
+        form.reset();
+    });
+}
+
+// ════════════════════════════════════════════════
+// LIGHTBOX PARA DIAGRAMAS
+// ════════════════════════════════════════════════
+
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    if (lightbox && img) {
+        img.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
