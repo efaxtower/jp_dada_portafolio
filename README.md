@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Estilo-Dadá-FF6B9D?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Desarrollador-Jesús_Pérez-2ECC71?style=for-the-badge" />
   <img src="https://img.shields.io/badge/De-Venezuela-FFD700?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Edad-18_años-4A90E2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Edad-19_años-4A90E2?style=for-the-badge" />
 </div>
 
 ## 📋 ¿Qué es esto?
