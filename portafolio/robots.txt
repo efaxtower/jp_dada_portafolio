@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://efaxtower.github.io/jp_dada_portafolio/sitemap.xml
