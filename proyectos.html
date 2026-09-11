@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos | Jesús Pérez</title>
+    <meta name="description" content="Proyectos de Jesús Pérez: SindroMerchado, Sistema de Panadería, Dra. Victoria, Beep Jesus Pro y más.">
+    <meta property="og:title" content="Proyectos | Jesús Pérez">
+    <meta property="og:description" content="Sistemas reales en producción: microservicios en PHP, sitios médicos y automatización con Bash.">
+    <meta property="og:image" content="https://efaxtower.github.io/jp_dada_portafolio/images/perfil.jpg">
+    <meta property="og:url" content="https://efaxtower.github.io/jp_dada_portafolio/proyectos.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎨%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -19,29 +26,32 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+                <li><a href="index.html#habilidades">Habilidades</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="servidores.html">Servidores</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle dada-btn"><i class="fas fa-moon"></i></button>
-            <div class="hamburger dada-hamburger"><span></span><span></span><span></span></div>
+            <button id="theme-toggle" class="theme-toggle dada-btn" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+            <div class="hamburger dada-hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></div>
         </div>
     </nav>
 
     <section class="page-header">
         <div class="container">
             <h1 class="dada-title">Proyectos <span class="dada-emoji">🎨</span></h1>
-            <p class="dada-text">Una galería caótica de mis creaciones</p>
+            <p class="dada-text">Galería de proyectos reales.</p>
         </div>
     </section>
 
     <section class="galeria-proyectos">
         <div class="container">
             <div class="proyectos-grid-dada">
+
                 <!-- SindroMerchado -->
                 <div class="proyecto-card-dada dada-card" id="sindromerchado" style="transform: rotate(-2deg);">
                     <div class="proyecto-img">
-                        <img src="images/sindromerchado.png" alt="SindroMerchado" />
+                        <img src="images/sindromerchado.png" alt="SindroMerchado - Sistema de supermercado online" loading="lazy" />
                         <span class="badge-privado">🔒 Privado</span>
                     </div>
                     <div class="proyecto-info">
@@ -51,8 +61,10 @@
                             <span>PHP</span><span>MySQL</span><span>Microservicios</span><span>API Gateway</span>
                         </div>
                         <div class="proyecto-links">
-                            <span class="link-disabled"><i class="fas fa-lock"></i> Privado</span>
-                            <a href="#" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" onclick="openLightbox('images/sindromerchado-arquitectura.png'); return false;" class="proyecto-detalle">
+                                <i class="fas fa-project-diagram"></i> Ver arquitectura
+                            </a>
+                            <span class="link-disabled"><i class="fas fa-lock"></i> Código privado</span>
                         </div>
                     </div>
                 </div>
@@ -60,18 +72,17 @@
                 <!-- Panadería -->
                 <div class="proyecto-card-dada dada-card" id="panaderia" style="transform: rotate(3deg);">
                     <div class="proyecto-img">
-                        <img src="images/panaderia.png" alt="Sistema Panadería" />
+                        <img src="images/panaderia.png" alt="Sistema de Panadería" loading="lazy" />
                         <span class="badge-produccion">✅ En Producción</span>
                     </div>
                     <div class="proyecto-info">
                         <h3>Sistema de Panadería</h3>
-                        <p>CRUD que mi papá usa para calcular costos, ganancias y precios de venta. En uso real todos los días.</p>
+                        <p>CRUD que mi papá usa a diario para calcular costos, ganancias y precios de venta. En uso real todos los días.</p>
                         <div class="proyecto-tags">
                             <span>PHP</span><span>MySQL</span><span>CRUD</span><span>Lógica de Negocio</span>
                         </div>
                         <div class="proyecto-links">
-                            <span class="link-disabled"><i class="fas fa-lock"></i> Privado</span>
-                            <a href="#" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <span class="link-disabled"><i class="fas fa-lock"></i> Código privado</span>
                         </div>
                     </div>
                 </div>
@@ -79,7 +90,7 @@
                 <!-- Beep Jesus Pro -->
                 <div class="proyecto-card-dada dada-card" id="beep" style="transform: rotate(-1deg);">
                     <div class="proyecto-img">
-                        <img src="images/beep-jesus.png" alt="Beep Jesus Pro" />
+                        <img src="images/beep-jesus.png" alt="Beep Jesus Pro v3.0.1" loading="lazy" />
                         <span class="badge-publico">🌐 Público</span>
                     </div>
                     <div class="proyecto-info">
@@ -89,10 +100,9 @@
                             <span>Bash</span><span>Linux</span><span>MIDI</span><span>Scripting</span>
                         </div>
                         <div class="proyecto-links">
-                            <a href="https://github.com/efaxtower/Beep-InitLinux" target="_blank">
-                                <i class="fab fa-github"></i> Ver Código
+                            <a href="https://github.com/efaxtower/Beep-InitLinux" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> Ver código
                             </a>
-                            <a href="#" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +110,7 @@
                 <!-- Dra. Victoria -->
                 <div class="proyecto-card-dada dada-card" id="dravictoria" style="transform: rotate(2deg);">
                     <div class="proyecto-img">
-                        <img src="images/dra-victoria.png" alt="Dra. Victoria" />
+                        <img src="images/dra-victoria.png" alt="Sitio web Dra. Victoria" loading="lazy" />
                         <span class="badge-produccion">✅ En Producción</span>
                     </div>
                     <div class="proyecto-info">
@@ -110,18 +120,18 @@
                             <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span>
                         </div>
                         <div class="proyecto-links">
-                            <a href="https://dravictoriap.com" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Visitar Sitio
+                            <a href="https://dravictoriap.com" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Visitar sitio
                             </a>
-                            <a href="#" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>  <!-- Guía de Estilos (Nuevo) -->
-                <div class="proyecto-card-dada dada-card" style="transform: rotate(-3deg);">
-                 <div class="proyecto-img">
-                        <img src="images/diseño.png" alt="Servidor Local" />
-                        <span class="badge-privado">🖥️  Privado</span>
-                        <i class="fas fa-palette"></i>
+                </div>
+
+                <!-- Guía de Estilos -->
+                <div class="proyecto-card-dada dada-card" id="guia-estilos" style="transform: rotate(-3deg);">
+                    <div class="proyecto-img">
+                        <img src="images/diseno.png" alt="Guía de estilos de diseño web" loading="lazy" />
+                        <span class="badge-privado">🔒 Personal</span>
                     </div>
                     <div class="proyecto-info">
                         <h3>Guía de Estilos de Diseño</h3>
@@ -130,29 +140,31 @@
                             <span>HTML</span><span>CSS</span><span>Diseño</span><span>Referencia</span>
                         </div>
                         <div class="proyecto-links">
-                            <span class="link-disabled"><i class="fas fa-lock"></i> Personal</span>
-                            <a href="#" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <span class="link-disabled"><i class="fas fa-lock"></i> Uso personal</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Servidor Local (Nuevo) -->
-                <div class="proyecto-card-dada dada-card" style="transform: rotate(4deg);">
+                <!-- Servidor Local -->
+                <div class="proyecto-card-dada dada-card" id="servidor" style="transform: rotate(4deg);">
                     <div class="proyecto-img">
-                        <img src="images/servidor.jpg" alt="Servidor Local" />
+                        <img src="images/servidor.jpg" alt="Servidor local LAMP + Samba" loading="lazy" />
                         <span class="badge-publico">🖥️ Infraestructura</span>
                     </div>
                     <div class="proyecto-info">
                         <h3>Servidor Local LAMP + Samba</h3>
-                        <p>Servidor con 1GB de RAM configurado con LAMP, Samba, Cockpit. Edito desde Windows, ejecuto en Linux.</p>
+                        <p>Servidor con 1GB de RAM configurado con LAMP, Samba y Cockpit. Edito desde Windows, ejecuto en Linux.</p>
                         <div class="proyecto-tags">
                             <span>Linux</span><span>Apache</span><span>MySQL</span><span>Samba</span><span>Cockpit</span>
                         </div>
                         <div class="proyecto-links">
-                            <a href="servidores.html" class="proyecto-detalle">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                            <a href="servidores.html">
+                                <i class="fas fa-arrow-right"></i> Ver detalles
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -161,12 +173,17 @@
         <div class="container">
             <p>&copy; 2026 Jesús Pérez. Hecho con ❤️ desde Venezuela</p>
             <div class="footer-social">
-                <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/tuusuario" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/efaxtower" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-084424435/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox para diagramas -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Vista ampliada del diagrama">
+        <span class="lightbox-close" aria-label="Cerrar">&times;</span>
+        <img id="lightbox-img" src="" alt="Diagrama ampliado" />
+    </div>
 
     <script src="js/main.js"></script>
 </body>

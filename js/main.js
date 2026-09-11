@@ -30,18 +30,23 @@ themeToggle.addEventListener('click', () => {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
     });
-});
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
 
 // ════════════════════════════════════════════════
-// CARRUSEL DADÁ
+// CARRUSEL
 // ════════════════════════════════════════════════
 
 const track = document.getElementById('carruselTrack');
@@ -50,56 +55,35 @@ const dots = document.querySelectorAll('.dot');
 const prevBtn = document.getElementById('prevSlide');
 const nextBtn = document.getElementById('nextSlide');
 
-let currentIndex = 0;
-const totalSlides = slides.length;
+if (track && slides.length > 0) {
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-function updateCarrusel(index) {
-    // Asegurar que el índice esté dentro del rango
-    if (index < 0) index = totalSlides - 1;
-    if (index >= totalSlides) index = 0;
+    function updateCarrusel(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+    }
 
-    currentIndex = index;
+    if (prevBtn) prevBtn.addEventListener('click', () => updateCarrusel(currentIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => updateCarrusel(currentIndex + 1));
 
-    // Mover el track
-    const offset = -currentIndex * 100;
-    track.style.transform = `translateX(${offset}%)`;
-
-    // Actualizar dots
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => updateCarrusel(index));
     });
+
+    let autoPlay = setInterval(() => updateCarrusel(currentIndex + 1), 5000);
+    const carruselContainer = document.querySelector('.carrusel-container');
+
+    if (carruselContainer) {
+        carruselContainer.addEventListener('mouseenter', () => clearInterval(autoPlay));
+        carruselContainer.addEventListener('mouseleave', () => {
+            autoPlay = setInterval(() => updateCarrusel(currentIndex + 1), 5000);
+        });
+    }
 }
-
-// Eventos de los botones
-prevBtn.addEventListener('click', () => {
-    updateCarrusel(currentIndex - 1);
-});
-
-nextBtn.addEventListener('click', () => {
-    updateCarrusel(currentIndex + 1);
-});
-
-// Eventos de los dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        updateCarrusel(index);
-    });
-});
-
-// Auto-reproducción (pausa al hacer hover)
-let autoPlay = setInterval(() => {
-    updateCarrusel(currentIndex + 1);
-}, 5000);
-
-const carruselContainer = document.querySelector('.carrusel-container');
-carruselContainer.addEventListener('mouseenter', () => {
-    clearInterval(autoPlay);
-});
-carruselContainer.addEventListener('mouseleave', () => {
-    autoPlay = setInterval(() => {
-        updateCarrusel(currentIndex + 1);
-    }, 5000);
-});
 
 // ════════════════════════════════════════════════
 // SCROLL SUAVE
@@ -108,14 +92,11 @@ carruselContainer.addEventListener('mouseleave', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        if (href === '#') return;
-        e.preventDefault();
+        if (href === '#' || href.length <= 1) return;
         const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
@@ -128,25 +109,43 @@ const form = document.querySelector('.contacto-form');
 if (form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const nombre = form.querySelector('input[type="text"]').value.trim();
-        const email = form.querySelector('input[type="email"]').value.trim();
-        const mensaje = form.querySelector('textarea').value.trim();
+        const nombre = form.querySelector('input[type="text"]')?.value.trim();
+        const email = form.querySelector('input[type="email"]')?.value.trim();
+        const mensaje = form.querySelector('textarea')?.value.trim();
 
         if (!nombre || !email || !mensaje) {
-            alert('¡Oye! Completa todos los campos 😤');
+            alert('Completa todos los campos, por favor.');
             return;
         }
 
-        alert('¡Mensaje enviado! (Demo - Conecta con backend) 🚀');
+        alert('¡Mensaje enviado! (Demo)');
         form.reset();
     });
 }
 
 // ════════════════════════════════════════════════
-// EFECTO DADÁ: Rotación aleatoria en elementos
+// LIGHTBOX PARA DIAGRAMAS
 // ════════════════════════════════════════════════
 
-document.querySelectorAll('.dada-card').forEach(el => {
-    const rot = (Math.random() - 0.5) * 4;
-    el.style.setProperty('--dada-rot', `${rot}deg`);
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    if (lightbox && img) {
+        img.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
 });

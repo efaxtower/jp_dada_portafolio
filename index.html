@@ -3,94 +3,112 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesús Pérez | Portafolio Dadá</title>
+    <title>Jesús Pérez | Desarrollador Web & Infraestructura</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portafolio de Jesús Pérez — Desarrollador Web y aprendiz de infraestructura. Proyectos reales en producción con PHP, Linux y Docker.">
+    <meta name="author" content="Jesús Pérez">
+    <meta name="keywords" content="Jesús Pérez, desarrollador web, PHP, Linux, Docker, Venezuela, portafolio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jesús Pérez | Desarrollador Web & Infraestructura">
+    <meta property="og:description" content="Construyo sistemas que resuelven problemas reales. PHP, MySQL, Linux, Docker.">
+    <meta property="og:image" content="https://efaxtower.github.io/jp_dada_portafolio/images/perfil.jpg">
+    <meta property="og:url" content="https://efaxtower.github.io/jp_dada_portafolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Estilos Principales -->
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- ═══════════════════ NAVBAR (Dadá) ═══════════════════ -->
+    <!-- NAVBAR -->
     <nav class="navbar dada-nav">
         <div class="container">
             <a href="index.html" class="logo dada-logo">Jesús<span>Pérez</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="servidores.html">Servidores</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle dada-btn">
+            <button id="theme-toggle" class="theme-toggle dada-btn" aria-label="Cambiar tema">
                 <i class="fas fa-moon"></i>
             </button>
-            <div class="hamburger dada-hamburger">
+            <div class="hamburger dada-hamburger" aria-label="Abrir menú">
                 <span></span><span></span><span></span>
             </div>
         </div>
     </nav>
 
-    <!-- ═══════════════════ HERO (Dadá) ═══════════════════ -->
+    <!-- HERO -->
     <section id="inicio" class="hero dada-hero">
         <div class="container">
             <div class="hero-content dada-grid">
                 <div class="hero-text animate__animated animate__fadeInUp">
-                    <span class="badge dada-badge">🚀 ¡Hola! Soy</span>
+                    <span class="badge dada-badge">🚀 Desarrollador Web & Aprendiz de Infraestructura</span>
                     <h1 class="dada-title">Jesús Pérez</h1>
-                    <h2 class="dada-subtitle">Desarrollador Web & Aprendiz de Infraestructura</h2>
-                    <p class="dada-text">De Venezuela, 19 años. Construyo sistemas que resuelven problemas reales.</p>
+                    <h2 class="dada-subtitle">PHP · Linux · Docker · Microservicios</h2>
+                    <p class="dada-text">
+                        Construyo sistemas que personas reales usan todos los días: 
+                        un sistema de panadería en producción, sitios web activos 
+                        y un servidor LAMP propio que administro desde cero.
+                    </p>
                     <div class="hero-buttons">
                         <a href="proyectos.html" class="btn btn-primary dada-btn-primary">
                             <i class="fas fa-code"></i> Ver Proyectos
                         </a>
-                        <a href="#contacto" class="btn btn-secondary dada-btn-secondary">
-                            <i class="fas fa-envelope"></i> Contactarme
+                        <a href="cv.html" class="btn btn-secondary dada-btn-secondary">
+                            <i class="fas fa-file-alt"></i> Ver CV
                         </a>
                     </div>
                     <div class="hero-social">
-                        <a href="https://github.com/efaxtower" target="_blank" class="social-icon dada-icon"><i class="fab fa-github"></i></a>
-                     
-                        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="social-icon dada-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://dravictoriap.com" target="_blank" class="social-icon dada-icon"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/efaxtower" target="_blank" rel="noopener" class="social-icon dada-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-084424435/" target="_blank" rel="noopener" class="social-icon dada-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://dravictoriap.com" target="_blank" rel="noopener" class="social-icon dada-icon" aria-label="Sitio Dra. Victoria"><i class="fas fa-globe"></i></a>
                     </div>
                 </div>
                 <div class="hero-image animate__animated animate__zoomIn">
                     <div class="profile-circle dada-circle">
-                        <img src="images/perfil.jpg" alt="Jesús Pérez" />
+                        <img src="images/perfil.jpg" alt="Jesús Pérez" loading="eager" />
                     </div>
                 </div>
             </div>
         </div>
         <div class="hero-bg-blur dada-blur"></div>
-        <!-- Elementos Dadá decorativos -->
         <div class="dada-deco deco-1">●</div>
         <div class="dada-deco deco-2">■</div>
         <div class="dada-deco deco-3">▲</div>
     </section>
 
-    <!-- ═══════════════════ CARRUSEL DADÁ DE PROYECTOS ═══════════════════ -->
+    <!-- CARRUSEL -->
     <section id="carrusel" class="carrusel-dada">
         <div class="container">
             <div class="section-header dada-header">
                 <span class="section-tag">Proyectos Destacados</span>
-                <h2>Mis Creaciones <span class="dada-emoji">🎭</span></h2>
-                <p>Un vistazo caótico a lo que he construido</p>
+                <h2>Proyectos reales, en producción <span class="dada-emoji">🎭</span></h2>
+                <p>Un recorrido por lo que he construido.</p>
             </div>
 
             <div class="carrusel-container">
                 <div class="carrusel-track" id="carruselTrack">
-                    <!-- Slide 1: SindroMerchado -->
+                    <!-- Slide 1 -->
                     <div class="carrusel-slide">
                         <div class="carrusel-card dada-card">
                             <div class="carrusel-img">
-                                <img src="images/sindromerchado.png" alt="SindroMerchado" />
+                                <img src="images/sindromerchado.png" alt="SindroMerchado" loading="lazy" />
                                 <span class="badge-privado">🔒 Privado</span>
                             </div>
                             <div class="carrusel-info">
@@ -104,16 +122,16 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2: Panadería -->
+                    <!-- Slide 2 -->
                     <div class="carrusel-slide">
                         <div class="carrusel-card dada-card">
                             <div class="carrusel-img">
-                                <img src="images/panaderia.png" alt="Sistema Panadería" />
+                                <img src="images/panaderia.png" alt="Sistema Panadería" loading="lazy" />
                                 <span class="badge-produccion">✅ En Producción</span>
                             </div>
                             <div class="carrusel-info">
                                 <h3>Sistema de Panadería</h3>
-                                <p>CRUD que mi papá usa para calcular costos, ganancias y precios de venta. En uso real todos los días.</p>
+                                <p>CRUD que mi papá usa a diario para calcular costos, ganancias y precios de venta. En uso real todos los días.</p>
                                 <div class="carrusel-tags">
                                     <span>PHP</span><span>MySQL</span><span>CRUD</span>
                                 </div>
@@ -122,11 +140,11 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3: Beep Jesus Pro -->
+                    <!-- Slide 3 -->
                     <div class="carrusel-slide">
                         <div class="carrusel-card dada-card">
                             <div class="carrusel-img">
-                                <img src="images/beep-jesus.png" alt="Beep Jesus Pro" />
+                                <img src="images/beep-jesus.png" alt="Beep Jesus Pro" loading="lazy" />
                                 <span class="badge-publico">🌐 Público</span>
                             </div>
                             <div class="carrusel-info">
@@ -140,11 +158,11 @@
                         </div>
                     </div>
 
-                    <!-- Slide 4: Dra. Victoria -->
+                    <!-- Slide 4 -->
                     <div class="carrusel-slide">
                         <div class="carrusel-card dada-card">
                             <div class="carrusel-img">
-                                <img src="images/dra-victoria.png" alt="Dra. Victoria" />
+                                <img src="images/dra-victoria.png" alt="Dra. Victoria" loading="lazy" />
                                 <span class="badge-produccion">✅ En Producción</span>
                             </div>
                             <div class="carrusel-info">
@@ -159,9 +177,8 @@
                     </div>
                 </div>
 
-                <!-- Controles del Carrusel (Dadá) -->
                 <div class="carrusel-controls">
-                    <button id="prevSlide" class="carrusel-btn dada-btn-control">
+                    <button id="prevSlide" class="carrusel-btn dada-btn-control" aria-label="Anterior">
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <div class="carrusel-dots" id="carruselDots">
@@ -170,7 +187,7 @@
                         <span class="dot" data-index="2"></span>
                         <span class="dot" data-index="3"></span>
                     </div>
-                    <button id="nextSlide" class="carrusel-btn dada-btn-control">
+                    <button id="nextSlide" class="carrusel-btn dada-btn-control" aria-label="Siguiente">
                         <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
@@ -178,19 +195,19 @@
         </div>
     </section>
 
-    <!-- ═══════════════════ SOBRE MÍ (Dadá) ═══════════════════ -->
+    <!-- SOBRE MÍ -->
     <section id="sobre-mi" class="sobre-mi dada-section">
         <div class="container">
             <div class="section-header dada-header">
                 <span class="section-tag">Sobre Mí</span>
-                <h2>Un poco de mi caos <span class="dada-emoji">🌀</span></h2>
+                <h2>Un poco sobre mí <span class="dada-emoji">🌀</span></h2>
                 <p>Autodidacta, curioso y siempre aprendiendo.</p>
             </div>
             <div class="sobre-mi-grid dada-grid">
                 <div class="sobre-mi-card dada-card" style="transform: rotate(-2deg);">
                     <i class="fas fa-user-graduate"></i>
-                    <h3>19 años</h3>
-                    <p>De Venezuela, aprendiendo desarrollo y administración de sistemas.</p>
+                    <h3>Autodidacta</h3>
+                    <p>Empecé con PHP y HTML. Hoy administro mi propio servidor Linux con LAMP.</p>
                 </div>
                 <div class="sobre-mi-card dada-card" style="transform: rotate(3deg);">
                     <i class="fas fa-server"></i>
@@ -205,13 +222,91 @@
                 <div class="sobre-mi-card dada-card" style="transform: rotate(4deg);">
                     <i class="fas fa-brain"></i>
                     <h3>Aprendizaje Constante</h3>
-                    <p>Laravel, Docker, redes, arquitectura de software.</p>
+                    <p>Laravel, Docker, redes y arquitectura de software.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ CONTACTO ═══════════════════ -->
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="habilidades dada-section">
+        <div class="container">
+            <div class="section-header dada-header">
+                <span class="section-tag">Stack</span>
+                <h2>Tecnologías que uso <span class="dada-emoji">🛠️</span></h2>
+                <p>Lo que sé, lo que estoy aprendiendo y con qué lo he demostrado.</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skills-block dada-card">
+                    <h3><i class="fas fa-code"></i> Desarrollo Web</h3>
+                    <ul class="skills-list">
+                        <li><span class="skill-name">PHP</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">MySQL</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">HTML / CSS</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">JavaScript</span><span class="skill-level nivel-basico">Básico</span></li>
+                        <li><span class="skill-name">Bootstrap / Tailwind</span><span class="skill-level nivel-basico">Básico</span></li>
+                        <li><span class="skill-name">Laravel</span><span class="skill-level nivel-aprendiendo">Aprendiendo</span></li>
+                    </ul>
+                </div>
+
+                <div class="skills-block dada-card">
+                    <h3><i class="fas fa-server"></i> Infraestructura</h3>
+                    <ul class="skills-list">
+                        <li><span class="skill-name">Linux (Debian/Ubuntu)</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">LAMP</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">Samba</span><span class="skill-level nivel-intermedio">Intermedio</span></li>
+                        <li><span class="skill-name">Cockpit</span><span class="skill-level nivel-basico">Básico</span></li>
+                        <li><span class="skill-name">Bash</span><span class="skill-level nivel-basico">Básico</span></li>
+                        <li><span class="skill-name">Docker</span><span class="skill-level nivel-aprendiendo">Aprendiendo</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="timeline dada-section">
+        <div class="container">
+            <div class="section-header dada-header">
+                <span class="section-tag">Evolución</span>
+                <h2>Mi recorrido <span class="dada-emoji">📈</span></h2>
+                <p>Lo que he construido año tras año.</p>
+            </div>
+            <div class="timeline-grid">
+                <div class="timeline-item dada-card">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h4>Primer servidor LAMP propio</h4>
+                        <p>Configuré Linux, Apache, MySQL y PHP desde cero en un servidor con 1GB de RAM.</p>
+                    </div>
+                </div>
+                <div class="timeline-item dada-card">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Sistema de panadería en producción</h4>
+                        <p>Mi primer sistema usado a diario por una persona real: mi papá.</p>
+                    </div>
+                </div>
+                <div class="timeline-item dada-card">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>Sitio de la Dra. Victoria activo</h4>
+                        <p>Sitio médico con modales, mapa y botones de WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="timeline-item dada-card">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h4>Aprendiendo Docker y Laravel</h4>
+                        <p>Siguiente paso: contenerizar mis proyectos y dominar un framework.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
     <section id="contacto" class="contacto dada-section">
         <div class="container">
             <div class="section-header dada-header">
@@ -225,31 +320,38 @@
                         <i class="fab fa-github"></i>
                         <div>
                             <h4>GitHub</h4>
-                            <a href="https://github.com/efaxtower" target="_blank">github.com/efaxtower</a>
+                            <a href="https://github.com/efaxtower" target="_blank" rel="noopener">github.com/efaxtower</a>
+                        </div>
+                    </div>
+                    <div class="contacto-item dada-card" style="transform: rotate(-2deg);">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Portafolio</h4>
+                            <a href="https://efaxtower.github.io/jp_dada_portafolio/" target="_blank" rel="noopener">efaxtower.github.io</a>
                         </div>
                     </div>
                 </div>
-                <!-- Formulario que redirige a Google Forms -->
-<div class="contacto-form-wrapper">
-    <p class="form-invite">📬 ¡Escríbeme! Usa este formulario y te responderé por email.</p>
-    <a href="https://forms.gle/QAihPT8mAGCK59KF9" 
-       target="_blank" 
-       class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i> Abrir Formulario
-    </a>
-    <p class="form-note">⚠️ Serás redirigido a Google Forms. Sin spam, sin ataques, sin backend.</p>
-</div>
+                <div class="contacto-form-wrapper">
+                    <p class="form-invite">📬 ¿Tienes un proyecto o quieres colaborar? Escríbeme.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScP9s0geYOLbG06JayIZnoWJstjzJBArVTUjE68pEnYJuo_TQ/viewform?usp=send_form"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Abrir formulario
+                    </a>
+                    <p class="form-note">Te responderé en menos de 24 horas.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <!-- FOOTER -->
     <footer class="footer dada-footer">
         <div class="container">
             <p>&copy; 2026 Jesús Pérez. Hecho con ❤️ desde Venezuela</p>
             <div class="footer-social">
-                <a href="https://github.com/efaxtower" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/efaxtower" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-084424435/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
