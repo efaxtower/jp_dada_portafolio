@@ -45,28 +45,6 @@ Mi portafolio personal con **estilo Dadá**. Un caos ordenado donde muestro:
 
 ---
 
-## 📁 Estructura del Proyecto
-efaxtower.github.io/
-├── index.html # Página principal (Hero + Carrusel Dadá)
-├── proyectos.html # Galería completa de proyectos
-├── servidores.html # Mi infraestructura detallada
-├── css/
-│ └── style.css # Estilos unificados con estilo Dadá
-├── js/
-│ └── main.js # Carrusel, Theme Toggle, menú
-├── images/
-│ ├── perfil.jpg # Mi foto (o un gato 🐱)
-│ ├── sindromerchado.png
-│ ├── panaderia.png
-│ ├── beep-jesus.png
-│ ├── dra-victoria.png
-│ └── servidor.jpg
-└── README.md # Este archivo
-
-text
-
----
-
 ## 🎨 Características del Diseño
 
 | Estilo | Aplicación |
