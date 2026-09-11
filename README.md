@@ -75,7 +75,7 @@ Mi portafolio personal con **estilo Dadá**. Un caos ordenado donde muestro:
 | Red | Enlace |
 |-----|--------|
 | **GitHub** | [github.com/efaxtower](https://github.com/efaxtower) |
-| **LinkedIn** | [linkedin.com/in/efaxtower](https://linkedin.com/in/efaxtower) |
+| **LinkedIn** | [linkedin.com](https://www.linkedin.com/in/jes%C3%BAs-p%C3%A9rez-084424435/) |
 | **Portafolio** | [efaxtower.github.io](https://efaxtower.github.io) |
 
 ---
